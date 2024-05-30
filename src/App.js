@@ -1,5 +1,4 @@
-import React from "react";
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Video from "./pages/Video";
 import Main from "./pages/Main";
 import styles from "./styles/App.css";

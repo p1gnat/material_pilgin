@@ -3,7 +3,7 @@ import styles from "./TextBlock.module.css";
 
 function TextBlock({ children }) {
   const handleMouseOver = (event) => {
-    event.currentTarget.style.backgroundColor = "black";
+    event.currentTarget.style.backgroundColor = "rgb(54, 17, 54)";
   };
 
   const handleMouseOut = (event) => {

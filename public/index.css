@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body {
-  background: #2c2c2c;
+  background: linear-gradient(to right, rgb(54, 17, 54), rgb(33, 14, 66));
 }
 #root {
   font-family: "Roboto";
