@@ -1,0 +1,8 @@
+.main {
+  margin-top: 50px;
+  max-width: 400px;
+  background-size: cover;
+  border: 1px solid gray;
+  padding: 10px 20px;
+  transition: ease-in-out;
+}

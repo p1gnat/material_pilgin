@@ -1,0 +1,17 @@
+.navbar {
+  height: 50px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  padding: 0px 15px;
+}
+.navbar__links {
+  margin-left: auto;
+  text-decoration: "none";
+}
+.link {
+  text-decoration: "none";
+  color: "white";
+  margin-right: "5px";
+  font-size: "10px";
+}
