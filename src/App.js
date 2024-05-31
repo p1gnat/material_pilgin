@@ -6,6 +6,7 @@ import Texts from "./pages/Texts";
 import Books from "./pages/Books";
 import Other from "./pages/Other";
 import LinkList from "./components/links/LinkList";
+import { useEffect, useState } from "react";
 
 function App() {
   return (
@@ -25,5 +26,4 @@ function App() {
     </BrowserRouter>
   );
 }
-
 export default App;

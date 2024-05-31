@@ -9,6 +9,9 @@
   margin-left: auto;
   text-decoration: "none";
 }
+.navbar__timer {
+  display: flex;
+}
 .link {
   text-decoration: "none";
   color: "white";

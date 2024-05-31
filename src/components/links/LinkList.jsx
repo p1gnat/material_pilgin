@@ -1,8 +1,24 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import styles from "../links/LinkList.module.css";
 
 function LinkList(props) {
+  const [timer, setTimer] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTimer((prevTimer) => {
+        const newTimer = prevTimer + 1;
+        localStorage.setItem("timer", newTimer);
+        return newTimer;
+      });
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div>
+    <div className={styles.main}>
       <Link
         to="/main"
         style={{
@@ -19,6 +35,7 @@ function LinkList(props) {
           textDecoration: "none",
           color: "white",
           marginRight: "5px",
+          marginTop: "5px",
           fontSize: "10px",
         }}
       >
@@ -30,6 +47,7 @@ function LinkList(props) {
           textDecoration: "none",
           color: "white",
           marginRight: "5px",
+          marginTop: "5px",
           fontSize: "10px",
         }}
       >
@@ -41,6 +59,7 @@ function LinkList(props) {
           textDecoration: "none",
           color: "white",
           marginRight: "5px",
+          marginTop: "5px",
           fontSize: "10px",
         }}
       >
@@ -52,11 +71,15 @@ function LinkList(props) {
           textDecoration: "none",
           color: "white",
           marginRight: "5px",
+          marginTop: "5px",
           fontSize: "10px",
         }}
       >
         Офф-Топ
       </Link>
+      <div className={styles.main__timer}>
+        Не забывай про время: {timer} сек
+      </div>
     </div>
   );
 }
