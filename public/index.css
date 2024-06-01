@@ -4,9 +4,10 @@
   box-sizing: border-box;
 }
 body {
-  background: linear-gradient(to right, rgb(54, 17, 54), rgb(33, 14, 66));
+  background: #282a2e;
 }
 #root {
-  font-family: "Roboto";
-  color: #bbff00;
+  font-family: "Rubik";
+  color: white;
+  font-weight: bold;
 }

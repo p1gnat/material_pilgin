@@ -1,15 +1,37 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import styles from "./Navbar.module.css";
+import LinkList from "../links/LinkList";
+import Timer from "../timer/Timer";
 
 function Navbar() {
+  const location = useLocation();
+  const pathName = location.pathname.toLowerCase();
+
+  const linkChecker = () => {
+    if (pathName === "/texts") {
+      return "rgb(190, 190, 0)";
+    } else if (pathName === "/main") {
+      return "darkgreen";
+    } else if (pathName === "/video") {
+      return "darkgoldenrod";
+    } else if (pathName === "/books") {
+      return "rgb(73, 0, 73)";
+    } else if (pathName === "/other") {
+      return "darkred";
+    }
+  };
+
   return (
-    <div>
-      <navbar>
-        <Link to="/main">Видео</Link>
-        <Link to="/main">Текстовые Материалы</Link>
-        <Link to="/about">Книги</Link>
-        <Link to="/about">Офф-Топ</Link>
-      </navbar>
+    <div
+      className={styles.navbar}
+      style={{
+        backgroundColor: linkChecker(),
+        transition: "background-color 0.2s ease-in-out",
+      }}
+    >
+      <LinkList />
+      <Timer />
     </div>
   );
 }

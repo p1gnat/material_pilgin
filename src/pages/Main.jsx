@@ -1,4 +1,5 @@
-import TextBlock from "../components/navbar/block/TextBlock";
+import TextBlock from "../components/block/TextBlock";
+import Navbar from "../components/navbar/Navbar";
 import styles from "./Main.module.css";
 import banan from "./MainImages/banan.png";
 

@@ -4,8 +4,42 @@
   margin-top: 10px;
   margin-left: 10px;
 }
+
+.wrapper {
+  margin-top: -10px;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out,
+    border-bottom 2s ease-in-out;
+  padding-bottom: 5px;
+}
+
 .main__timer {
   color: white;
   margin-left: auto;
   margin-right: 10px;
+  margin-top: 4px;
 }
+
+.link {
+  text-decoration: none;
+  color: white;
+  margin-right: 26px;
+  font-size: 20px;
+  border-bottom: 3px solid black;
+}
+.linkSmall {
+  text-decoration: none;
+  color: white;
+  margin-right: 8px;
+  margin-top: 5px;
+  font-size: 15px;
+  border-bottom: 3px solid black;
+}
+
+/* style={{
+  textDecoration: "none",
+  color: "white",
+  marginRight: "26px",
+  fontSize: "20px",
+  borderBottom: borderC,
+  borderColor: "green",
+} */

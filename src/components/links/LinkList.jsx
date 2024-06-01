@@ -1,84 +1,49 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "../links/LinkList.module.css";
 
-function LinkList(props) {
-  const [timer, setTimer] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setTimer((prevTimer) => {
-        const newTimer = prevTimer + 1;
-        localStorage.setItem("timer", newTimer);
-        return newTimer;
-      });
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, []);
+function LinkList() {
+  const [backColor, setBackColor] = useState("#282a2e");
+  const [borderC, setBorderC] = useState("3px solid");
 
   return (
-    <div className={styles.main}>
-      <Link
-        to="/main"
-        style={{
-          textDecoration: "none",
-          color: "white",
-          marginRight: "16px",
-        }}
-      >
-        Главная
-      </Link>
-      <Link
-        to="/video"
-        style={{
-          textDecoration: "none",
-          color: "white",
-          marginRight: "5px",
-          marginTop: "5px",
-          fontSize: "10px",
-        }}
-      >
-        Видео
-      </Link>
-      <Link
-        to="/texts"
-        style={{
-          textDecoration: "none",
-          color: "white",
-          marginRight: "5px",
-          marginTop: "5px",
-          fontSize: "10px",
-        }}
-      >
-        Тексты
-      </Link>
-      <Link
-        to="/books"
-        style={{
-          textDecoration: "none",
-          color: "white",
-          marginRight: "5px",
-          marginTop: "5px",
-          fontSize: "10px",
-        }}
-      >
-        Книги
-      </Link>
-      <Link
-        to="/other"
-        style={{
-          textDecoration: "none",
-          color: "white",
-          marginRight: "5px",
-          marginTop: "5px",
-          fontSize: "10px",
-        }}
-      >
-        Офф-Топ
-      </Link>
-      <div className={styles.main__timer}>
-        Не забывай про время: {timer} сек
+    <div className={styles.wrapper}>
+      <div className={styles.main}>
+        <Link
+          to="/main"
+          className={styles.link}
+          style={{ borderColor: "green" }}
+        >
+          Главная
+        </Link>
+        <Link
+          to="/video"
+          className={styles.linkSmall}
+          style={{ borderColor: "orange" }}
+        >
+          Видео
+        </Link>
+        <Link
+          to="/texts"
+          className={styles.linkSmall}
+          style={{ borderColor: "yellow" }}
+        >
+          Тексты
+        </Link>
+        <Link
+          to="/books"
+          className={styles.linkSmall}
+          style={{ borderColor: "purple" }}
+        >
+          Книги
+        </Link>
+        <Link
+          to="/other"
+          className={styles.linkSmall}
+          style={{ borderColor: "red" }}
+        >
+          Офф-Топ
+        </Link>
       </div>
     </div>
   );
