@@ -1,0 +1,16 @@
+.prev {
+  display: flex;
+
+  max-width: 1300px;
+  min-width: 300px;
+
+  margin-bottom: 50px;
+}
+.prev__img {
+  max-width: 800px;
+}
+.prev__text {
+  font-weight: 500;
+  max-width: 250px;
+  font-size: 25px;
+}

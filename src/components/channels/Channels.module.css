@@ -1,0 +1,13 @@
+.block {
+  max-width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  text-align: center;
+  margin-bottom: 100px;
+}
+.block__wrapper {
+  display: flex;
+  gap: 30px;
+}
