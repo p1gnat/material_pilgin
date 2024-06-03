@@ -11,6 +11,7 @@ import Texts from "./pages/Texts";
 import Books from "./pages/Books";
 import Other from "./pages/Other";
 import Navbar from "./components/navbar/Navbar";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <>
               <Navbar />
               <Outlet />
+              <Footer />
             </>
           }
         >
