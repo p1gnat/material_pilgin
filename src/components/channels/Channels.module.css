@@ -1,5 +1,6 @@
 .block {
   max-width: 150px;
+  min-width: 50px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -10,4 +11,19 @@
 .block__wrapper {
   display: flex;
   gap: 30px;
+  min-width: 200px;
+}
+@media (max-width: 900px) {
+  .block {
+    max-width: 150px;
+    min-width: 50px;
+    gap: 5px;
+    margin-bottom: 10px;
+  }
+  .block__wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    min-width: 200px;
+  }
 }

@@ -35,11 +35,17 @@
   border-bottom: 3px solid black;
 }
 
-/* style={{
-  textDecoration: "none",
-  color: "white",
-  marginRight: "26px",
-  fontSize: "20px",
-  borderBottom: borderC,
-  borderColor: "green",
-} */
+@media (max-width: 600px) {
+  .link {
+    font-size: 14px;
+  }
+  .linkSmall {
+    font-size: 11px;
+  }
+  .main {
+    margin-left: -5px;
+  }
+  .main__timer {
+    margin-right: -5px;
+  }
+}

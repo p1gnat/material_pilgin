@@ -42,7 +42,7 @@ function LinkList() {
           className={styles.linkSmall}
           style={{ borderColor: "red" }}
         >
-          Офф-Топ
+          ОффТоп
         </Link>
       </div>
     </div>
