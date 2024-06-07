@@ -1,8 +1,6 @@
 import TextBlock from "../components/block/TextBlock";
-import Navbar from "../components/navbar/Navbar";
 import styles from "./Main.module.css";
 import banan from "./MainImages/banan.png";
-
 import React from "react";
 
 function Main() {
