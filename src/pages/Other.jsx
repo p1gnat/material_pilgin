@@ -1,8 +1,13 @@
 import React from "react";
-import Navbar from "../components/navbar/Navbar";
+import OffComponent from "../components/otherPage/OffComponent";
 
 function Other(props) {
-  return <div>other</div>;
+  return (
+    <div>
+      <OffComponent />
+      https://leetcode.com https://www.codewars.com https://github.com/
+    </div>
+  );
 }
 
 export default Other;

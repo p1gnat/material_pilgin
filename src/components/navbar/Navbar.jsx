@@ -15,7 +15,7 @@ function Navbar() {
       return "darkgreen";
     } else if (pathName === "/video") {
       return "darkgoldenrod";
-    } else if (pathName === "/books") {
+    } else if (pathName.startsWith("/books")) {
       return "rgb(73, 0, 73)";
     } else if (pathName === "/other") {
       return "darkred";

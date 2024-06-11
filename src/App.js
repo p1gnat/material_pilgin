@@ -12,6 +12,7 @@ import Books from "./pages/Books";
 import Other from "./pages/Other";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
+import InnerBook from "./components/hardBook/InnerBook";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path="/video" element={<Video />} />
           <Route path="/texts" element={<Texts />} />
           <Route path="/books" element={<Books />} />
+          <Route path="/books/:id" element={<InnerBook />} />
           <Route path="/other" element={<Other />} />
           <Route path="*" element={<Navigate to="/main" replace />} />
         </Route>
