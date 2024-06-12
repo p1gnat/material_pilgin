@@ -19,6 +19,7 @@ export const read = [
         бесполезных
       </>
     ),
+    name: "JavaScript для начинающих",
     imgUrl: img1,
     url: "https://codelibrary.info/download/1435_JavaScript-dlya-nachinayshih.pdf",
     id: "1",
@@ -35,6 +36,7 @@ export const process = [
         не растерялся и вспомнил время когда чуть изучал пайтон и купил её...
       </>
     ),
+    name: "Современный JavaScript для нетерпеливых",
     imgUrl: img2,
     url: "https://codelibrary.info/download/1355_Sovremenny_JavaScript_dlya_neterpelivykh.pdf",
     id: "2",
@@ -49,6 +51,7 @@ export const process = [
         для фронтендера ))
       </>
     ),
+    name: "Грокаем алгоритмы",
     imgUrl: img3,
     url: "https://www.phantastike.com/yelektronnaya_kommertciya/grokaem_algoritmyi/pdf/",
     id: "3",
@@ -66,6 +69,7 @@ export const plans = [
         прочтения
       </>
     ),
+    name: "Создаём динамические веб-сайты с помощью ...",
     imgUrl: img4,
     url: "https://codelibrary.info/download/1345_Sozdaem-dinamicheskie-veb-sayty-s-pomoshchyu-PHP-MySQL-javascript-CSS-i-HTML5.pdf",
     id: "4",

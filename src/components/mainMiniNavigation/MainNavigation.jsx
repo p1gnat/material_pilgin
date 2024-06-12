@@ -1,19 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./MainNavigation.module.css";
-import gif1 from "./MainImages/catic.gif";
-import gif2 from "./MainImages/catic_2.gif";
+import BookNavigation from "./BookNavigation.jsx";
 
 function MainNavigation(props) {
   return (
     <>
-      <div className={styles.img_wrapper}>
-        <img src={gif2} alt="banana" className={styles.img}></img>
-        <h1 className={styles.navbar__text}>
-          Для тех , кому не нравится навигация сверху -_-
-        </h1>
-        <img src={gif1} alt="banana" className={styles.img}></img>
-      </div>
+      <h1 className={styles.navbar__text}>Навигация 2.0</h1>
       <div className={styles.navbar__main}>
         <ul className={styles.navbar}>
           <li className={styles.li_1}>
@@ -44,6 +37,7 @@ function MainNavigation(props) {
             >
               Книги
             </Link>
+            <BookNavigation />
           </li>
 
           <li className={styles.li_4}>

@@ -1,0 +1,8 @@
+.link {
+  font-size: 20px;
+  text-decoration: none;
+  color: rgb(170, 7, 170);
+}
+li::before {
+  color: rgb(255, 204, 255);
+}

@@ -1,15 +1,7 @@
-.img {
-  margin: 0px 30px;
-  max-height: 200px;
-}
-.img_wrapper {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: row;
-}
 .navbar__text {
-  margin-top: 80px;
+  margin: 10px 0px 30px;
   text-align: center;
+  border-bottom: 4px solid green;
 }
 .navbar__main {
   display: flex;
@@ -40,13 +32,14 @@
   color: yellow;
 }
 .navbar .li_3::before {
-  color: purple;
+  color: rgb(255, 204, 255);
 }
 .navbar .li_4::before {
   color: red;
 }
+.li_3,
 .li_4 {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 .link {
   text-decoration: none;
