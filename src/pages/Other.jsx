@@ -1,11 +1,10 @@
 import React from "react";
 import OffComponent from "../components/otherPage/OffComponent";
 
-function Other(props) {
+function Other() {
   return (
     <div>
       <OffComponent />
-      https://leetcode.com https://www.codewars.com https://github.com/
     </div>
   );
 }

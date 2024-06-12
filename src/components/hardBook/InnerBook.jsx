@@ -9,7 +9,7 @@ function InnerBook(props) {
   const book = books.find((book) => book.id === params.id);
   return (
     <div className={styles.main}>
-      <img src={book.imgUrl} alt=""></img>
+      <img src={book.imgUrl} alt="" className={styles.img}></img>
       <Link to={book.url} target="_blank">
         <button className={styles.button}>Скачать</button>
       </Link>

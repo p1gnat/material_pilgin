@@ -11,6 +11,6 @@
 @media (max-width: 400px) {
   .main__timer {
     font-size: 10px;
-    margin-right: 5px;
+    margin-right: 0px;
   }
 }

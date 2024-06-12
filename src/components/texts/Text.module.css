@@ -29,3 +29,11 @@
   font-size: 26px;
   max-width: 510px;
 }
+@media (max-width: 550px) {
+  .wrapper {
+    flex-direction: column;
+  }
+  .img {
+    margin-bottom: 20px;
+  }
+}

@@ -4,7 +4,6 @@
   justify-content: center;
   flex-direction: column;
   height: 95vh;
-  overflow-y: hidden;
 }
 
 .button {
@@ -28,4 +27,31 @@
   background-color: #232529;
   padding: 10px 20px;
   border-radius: 20px;
+}
+.img {
+  max-height: 726px;
+  min-height: 400px;
+}
+@media (max-width: 730px) {
+  .img {
+    max-height: 100%;
+    margin-top: 20px;
+  }
+  .text {
+    margin-top: 20px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 500px) {
+  .img {
+    max-height: 500px;
+    min-height: 200px;
+  }
+  .main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 70vh;
+  }
 }
