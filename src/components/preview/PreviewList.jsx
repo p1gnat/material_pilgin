@@ -1,17 +1,35 @@
 import React from "react";
-import { data } from "./PreviewData.jsx";
 import styles from "./Preview.module.css";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import { useEffect } from "react";
+import axios from "axios";
 
 function PreviewList() {
+  const [video, setVideo] = useState([]);
+
+  useEffect(() => {
+    axios.get("http://localhost:1337/api/previews").then((elem) => {
+      const videoData = elem.data.data;
+      setVideo(videoData);
+    });
+  }, []);
+
   return (
     <>
-      {data.map((data) => {
+      {video.map((data) => {
         return (
           <div className={styles.prev} key={data.id}>
-            <div className={styles.prev__text}>{data.text}</div>
-            <Link to={data.link} target="_blank">
-              <img src={data.img} alt="" className={styles.prev__img} />
+            <div
+              className={styles.prev__text}
+              dangerouslySetInnerHTML={{ __html: data.attributes.text }}
+            ></div>
+            <Link to={data.attributes.Url} target="_blank">
+              <img
+                src={data.attributes.imageUrl}
+                alt=""
+                className={styles.prev__img}
+              />
             </Link>
           </div>
         );

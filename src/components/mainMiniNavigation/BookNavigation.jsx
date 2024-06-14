@@ -1,19 +1,23 @@
 import React from "react";
 import styles from "./BookNavigation.module.css";
-import { plans, process, read } from "../hardBook/dataBooks.jsx";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { useState } from "react";
 
 function BookNavigation() {
-  const data = [...plans, ...process, ...read];
+  const [books, setBooks] = useState([]);
+  axios.get("http://localhost:1337/api/books").then((response) => {
+    const bookData = response.data.data;
+    setBooks(bookData);
+  });
 
   return (
     <ul style={{ listStyleType: "none" }}>
-      {data.map((data) => {
-        const linker = `/books/${data.id}`;
+      {books.map((book) => {
         return (
-          <li className={styles.elem} key={data.id}>
-            <Link to={linker} target="_blank" className={styles.link}>
-              {data.name}
+          <li className={styles.elem} key={book.id}>
+            <Link to={`/books/${book.id}`} className={styles.link}>
+              {book.attributes.name}
             </Link>
           </li>
         );

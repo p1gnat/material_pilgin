@@ -1,25 +1,52 @@
-import React from "react";
-import { read, process, plans } from "./dataBooks";
 import { useParams, Link } from "react-router-dom";
 import styles from "./InnerBook.module.css";
+import { useEffect } from "react";
+import axios from "axios";
+import { useState } from "react";
 
-function InnerBook(props) {
-  const books = [...read, ...process, ...plans];
+function InnerBook() {
+  const [books, setBooks] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:1337/api/books")
+      .then((response) => {
+        const bookData = response.data.data;
+        setBooks(bookData);
+      })
+      .catch((error) => {
+        console.error("There was an error fetching the data!", error);
+      });
+  }, []);
   const params = useParams();
-  const book = books.find((book) => book.id === params.id);
+
+  // console.log(book.id);
   return (
-    <div className={styles.main}>
-      <img src={book.imgUrl} alt="" className={styles.img}></img>
-      <Link to={book.url} target="_blank">
-        <button className={styles.button}>Скачать</button>
-      </Link>
-      <div className={styles.text}>
-        Книга взята из свободных источников и представлена исключительно для
-        ознакомления. Содержание книги является интеллектуальной собственностью
-        автора и выражает его взгляды. После ознакомления настаиваем на
-        приобретении официального издания!
-      </div>
-    </div>
+    <>
+      {books.map((elem) => {
+        if (parseInt(elem.id) === parseInt(params.id)) {
+          return (
+            <div key={elem.id} className={styles.main}>
+              <img
+                src={elem.attributes.imageUrl}
+                alt=""
+                className={styles.img}
+              />
+              <Link to={elem.attributes.url} target="_blank">
+                <button className={styles.button}>Скачать</button>
+              </Link>
+              <div className={styles.text}>
+                Книга взята из свободных источников и представлена исключительно
+                для ознакомления. Содержание книги является интеллектуальной
+                собственностью автора и выражает его взгляды. После ознакомления
+                настаиваем на приобретении официального издания!
+              </div>
+            </div>
+          );
+        }
+        return null; // обработка случая, когда не найдено соответствие по id
+      })}
+    </>
   );
 }
 

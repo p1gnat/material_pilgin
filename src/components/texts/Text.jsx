@@ -1,19 +1,38 @@
 import React from "react";
 import styles from "./Text.module.css";
 import { Link } from "react-router-dom";
-import { data } from "./TextData.jsx";
+
+import { useState } from "react";
+import axios from "axios";
+import { useEffect } from "react";
 
 function Text() {
+  const [text, setText] = useState([]);
+
+  useEffect(() => {
+    axios.get("http://localhost:1337/api/texts").then((texts) => {
+      const textsData = texts.data.data;
+      setText(textsData);
+    });
+  }, []);
+
   return (
     <>
-      {data.map((data) => {
+      {text.map((elem) => {
         return (
-          <div className={styles.main} key={data.id}>
+          <div className={styles.main} key={elem.id}>
             <div className={styles.wrapper}>
-              <Link to={data.link} target="_blank">
-                <img src={data.img} alt="imgr" className={styles.img}></img>
+              <Link to={elem.attributes.link} target="_blank">
+                <img
+                  src={elem.attributes.imgLink}
+                  alt="imgr"
+                  className={styles.img}
+                ></img>
               </Link>
-              <div className={styles.text}>{data.text}</div>
+              <div
+                className={styles.text}
+                dangerouslySetInnerHTML={{ __html: elem.attributes.text }}
+              ></div>
             </div>
           </div>
         );

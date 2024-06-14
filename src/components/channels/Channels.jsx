@@ -37,7 +37,7 @@ function Channels() {
         </Link>
         Айти Прогер
       </div>
-      <div className={styles.block} style={{ marginBottom: "100px" }}>
+      <div className={styles.block}>
         <Link to={"https://www.youtube.com/@m0rtymerr"} target="_blank">
           <img src={img5} alt=""></img>
         </Link>

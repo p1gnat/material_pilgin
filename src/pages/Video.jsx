@@ -7,14 +7,14 @@ function Video() {
   return (
     <>
       <div className={styles.all__in__all}>
+        <PreviewList />
+        <Channels />
         <div className={styles.main}>
           <div className={styles.texts}>
             Видео - очень лёгкий и прятный способ восприятия информации - <br />
             Список каналов, которые я смотрю и советую
           </div>
         </div>
-        <Channels />
-        <PreviewList />
       </div>
     </>
   );

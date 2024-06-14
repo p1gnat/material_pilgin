@@ -3,6 +3,10 @@
   align-items: center;
   flex-direction: column;
 }
+.span {
+  color: purple;
+  display: contents;
+}
 .wrapper {
   margin: 40px;
   max-width: 1000px;
