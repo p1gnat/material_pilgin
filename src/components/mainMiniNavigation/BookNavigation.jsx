@@ -7,18 +7,18 @@ function BookNavigation() {
   const data = [...plans, ...process, ...read];
 
   return (
-    <>
+    <ul style={{ listStyleType: "none" }}>
       {data.map((data) => {
         const linker = `/books/${data.id}`;
         return (
-          <li className={styles.elem}>
+          <li className={styles.elem} key={data.id}>
             <Link to={linker} target="_blank" className={styles.link}>
               {data.name}
             </Link>
           </li>
         );
       })}
-    </>
+    </ul>
   );
 }
 
