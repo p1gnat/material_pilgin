@@ -9,10 +9,15 @@ function PreviewList() {
   const [video, setVideo] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:1337/api/previews").then((elem) => {
-      const videoData = elem.data.data;
-      setVideo(videoData);
-    });
+    axios
+      .get("http://localhost:1337/api/previews")
+      .then((elem) => {
+        const videoData = elem.data.data;
+        setVideo(videoData);
+      })
+      .catch((error) => {
+        console.error("There was an error fetching the data!", error);
+      });
   }, []);
 
   return (

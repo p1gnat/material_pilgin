@@ -9,10 +9,15 @@ function OffComponent(props) {
   const [others, setOthers] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:1337/api/others").then((elem) => {
-      const otherData = elem.data.data;
-      setOthers(otherData);
-    });
+    axios
+      .get("http://localhost:1337/api/others")
+      .then((elem) => {
+        const otherData = elem.data.data;
+        setOthers(otherData);
+      })
+      .catch((error) => {
+        console.error("There was an error fetching the data!", error);
+      });
   }, []);
 
   return (

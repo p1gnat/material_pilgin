@@ -10,10 +10,15 @@ function Text() {
   const [text, setText] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:1337/api/texts").then((texts) => {
-      const textsData = texts.data.data;
-      setText(textsData);
-    });
+    axios
+      .get("http://localhost:1337/api/texts")
+      .then((texts) => {
+        const textsData = texts.data.data;
+        setText(textsData);
+      })
+      .catch((error) => {
+        console.error("There was an error fetching the data!", error);
+      });
   }, []);
 
   return (
