@@ -1,11 +1,7 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "../links/LinkList.module.css";
 
 function LinkList() {
-  const [backColor, setBackColor] = useState("#282a2e");
-  const [borderC, setBorderC] = useState("3px solid");
-
   return (
     <div className={styles.wrapper}>
       <div className={styles.main}>
