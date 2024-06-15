@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styles from "./MainNavigation.module.css";
 import BookNavigation from "./BookNavigation.jsx";
 
-function MainNavigation(props) {
+function MainNavigation() {
   return (
     <>
       <h1 className={styles.navbar__text}>Навигация 2.0</h1>

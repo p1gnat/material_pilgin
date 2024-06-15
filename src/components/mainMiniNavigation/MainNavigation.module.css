@@ -1,6 +1,7 @@
 .navbar__text {
   margin: 10px 0px 30px;
   text-align: center;
+  color: var(--color);
   border-bottom: 4px solid green;
 }
 .navbar__main {

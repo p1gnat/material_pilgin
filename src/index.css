@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.2s ease-in-out;
+}
+
+#root {
+  font-family: "Rubik";
+  color: white;
+  font-weight: bold;
+}
+
+.dark {
+  --back-color: #282a2e;
+  --back-help-color: #232529;
+  --color: white;
+}
+.light {
+  --back-color: white;
+  --back-help-color: #cfcfcf;
+  --color: black;
+}

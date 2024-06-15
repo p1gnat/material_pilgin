@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./BookNavigation.module.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
@@ -6,10 +6,17 @@ import { useState } from "react";
 
 function BookNavigation() {
   const [books, setBooks] = useState([]);
-  axios.get("http://localhost:1337/api/books").then((response) => {
-    const bookData = response.data.data;
-    setBooks(bookData);
-  });
+  useEffect(() => {
+    axios
+      .get("http://localhost:1337/api/books")
+      .then((response) => {
+        const bookData = response.data.data;
+        setBooks(bookData);
+      })
+      .catch((error) => {
+        console.error("There was an error fetching the data!", error);
+      });
+  }, []);
 
   return (
     <ul style={{ listStyleType: "none" }}>

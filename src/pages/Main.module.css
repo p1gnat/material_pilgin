@@ -1,7 +1,10 @@
 .main {
-  margin-top: 50px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  background-color: var(--back-color);
+}
+.text {
+  color: var(--back-color);
 }

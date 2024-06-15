@@ -15,6 +15,7 @@ function MainText(props) {
           marginBottom: "50px",
           borderBottom: "4px solid green",
           textAlign: "center",
+          color: "var(--color)",
         }}
       >
         Место Хранения Материалов для обучения

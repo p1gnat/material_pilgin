@@ -13,18 +13,35 @@ import Other from "./pages/Other";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import InnerBook from "./components/hardBook/InnerBook";
+import { useState } from "react";
 
 function App() {
+  const [theme, setTheme] = useState("dark");
+
+  const handleClick = () => {
+    switch (theme) {
+      case "dark":
+        setTheme("light");
+        break;
+      case "light":
+        setTheme("dark");
+        break;
+      default:
+        setTheme("dark");
+        break;
+    }
+  };
+
   return (
     <BrowserRouter>
       <Routes>
         <Route
           element={
-            <>
+            <div className={theme}>
               <Navbar />
               <Outlet />
-              <Footer />
-            </>
+              <Footer onClick={handleClick} />
+            </div>
           }
         >
           <Route path="/main" element={<Main />} />
