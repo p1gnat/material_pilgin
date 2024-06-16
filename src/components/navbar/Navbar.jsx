@@ -10,7 +10,7 @@ function Navbar() {
 
   const linkChecker = () => {
     if (pathName === "/texts") {
-      return "rgb(190, 190, 0)";
+      return "var(--navbar-main)";
     } else if (pathName === "/main") {
       return "darkgreen";
     } else if (pathName === "/video") {

@@ -4,21 +4,23 @@ function HelpText({ children }) {
   return (
     <div
       style={{
-        marginTop: "50px",
-        marginBottom: "30px",
         fontSize: "26px",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+        backgroundColor: "var(--back-color)",
       }}
     >
       <div
         style={{
-          backgroundColor: "#232529",
+          marginTop: "50px",
+          marginBottom: "30px",
+          backgroundColor: "var(--back-help-color)",
           display: "flex",
           maxWidth: "1000px",
           padding: "10px 20px",
           borderRadius: "20px",
+          color: "var(--color)",
         }}
       >
         {children}

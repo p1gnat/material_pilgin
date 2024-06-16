@@ -7,12 +7,13 @@ const StyledSpan = styled.span`
   color: green;
 `;
 
-function MainText(props) {
+function MainText() {
   return (
-    <div>
+    <div className={styles.main}>
       <h1
         style={{
           marginBottom: "50px",
+          marginTop: "30px",
           borderBottom: "4px solid green",
           textAlign: "center",
           color: "var(--color)",

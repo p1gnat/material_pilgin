@@ -6,7 +6,6 @@ import React from "react";
 function Main() {
   return (
     <div className={styles.main}>
-      <p className={styles.text}>diuashdfiujsdhfgihjs</p>
       <MainText />
       <MainNavigation />
     </div>

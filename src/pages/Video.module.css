@@ -5,8 +5,10 @@
   text-align: center;
   margin-top: 0px;
   margin-bottom: 50px;
+  color: var(--color);
 }
 .all__in__all {
+  background-color: var(--back-color);
   margin: auto;
   display: flex;
   flex-direction: column;

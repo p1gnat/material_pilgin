@@ -31,6 +31,9 @@
     },
     "text": {
       "type": "richtext"
+    },
+    "mainWord": {
+      "type": "string"
     }
   }
 }

@@ -22,7 +22,7 @@ function LinkList() {
         <Link
           to="/texts"
           className={styles.linkSmall}
-          style={{ borderColor: "yellow" }}
+          style={{ borderColor: "var(--navbar-color)" }}
         >
           Тексты
         </Link>

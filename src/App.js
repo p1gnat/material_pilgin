@@ -13,23 +13,23 @@ import Other from "./pages/Other";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import InnerBook from "./components/hardBook/InnerBook";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState(() => {
+    const savedTheme = localStorage.getItem("theme");
+    return savedTheme ? savedTheme : "dark";
+  });
 
-  const handleClick = () => {
-    switch (theme) {
-      case "dark":
-        setTheme("light");
-        break;
-      case "light":
-        setTheme("dark");
-        break;
-      default:
-        setTheme("dark");
-        break;
-    }
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  const handleClickLight = () => {
+    setTheme("light");
+  };
+  const handleClickDark = () => {
+    setTheme("dark");
   };
 
   return (
@@ -40,7 +40,10 @@ function App() {
             <div className={theme}>
               <Navbar />
               <Outlet />
-              <Footer onClick={handleClick} />
+              <Footer
+                onClickLight={handleClickLight}
+                onClickDark={handleClickDark}
+              />
             </div>
           }
         >

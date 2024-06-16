@@ -36,7 +36,11 @@ function Text() {
               </Link>
               <div
                 className={styles.text}
-                dangerouslySetInnerHTML={{ __html: elem.attributes.text }}
+                dangerouslySetInnerHTML={{
+                  __html:
+                    `<div style='color: var(--navbar-color); display: contents'>${elem.attributes.mainWord}</div>` +
+                    elem.attributes.text,
+                }}
               ></div>
             </div>
           </div>

@@ -4,6 +4,7 @@
   justify-content: center;
   flex-direction: column;
   height: 95vh;
+  background-color: var(--back-color);
 }
 
 .button {
@@ -17,6 +18,8 @@
   border: 3px solid #1d1f22;
   border-radius: 20px;
   cursor: pointer;
+  background-color: var(--back-help-color);
+  color: var(--color);
 }
 
 .text {
@@ -24,7 +27,8 @@
   max-width: 1000px;
   font-size: 26px;
   text-align: center;
-  background-color: #232529;
+  background-color: var(--back-help-color);
+  color: var(--color);
   padding: 10px 20px;
   border-radius: 20px;
 }

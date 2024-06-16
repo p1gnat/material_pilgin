@@ -3,7 +3,7 @@ import Text from "../components/texts/Text";
 
 function Texts(props) {
   return (
-    <div>
+    <div style={{ backgroundColor: "var(--back-color)" }}>
       <Text />
     </div>
   );

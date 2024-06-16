@@ -23,7 +23,7 @@ function MainNavigation() {
             <Link
               to="/texts"
               className={styles.link}
-              style={{ color: "yellow" }}
+              style={{ color: "var(--navbar-color)" }}
             >
               Тексты
             </Link>

@@ -30,7 +30,7 @@
   color: orange;
 }
 .navbar .li_2::before {
-  color: yellow;
+  color: var(--navbar-color);
 }
 .navbar .li_3::before {
   color: rgb(255, 204, 255);

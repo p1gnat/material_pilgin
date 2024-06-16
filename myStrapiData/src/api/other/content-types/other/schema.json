@@ -4,7 +4,8 @@
   "info": {
     "singularName": "other",
     "pluralName": "others",
-    "displayName": "Other"
+    "displayName": "Other",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,14 +13,15 @@
   "pluginOptions": {},
   "attributes": {
     "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "imageUrl": {
       "type": "string"

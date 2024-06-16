@@ -27,7 +27,8 @@
   font-size: 25px;
   padding: 10px 5px 10px 5px;
 
-  background-color: #232529;
+  background-color: var(--back-help-color);
+  color: var(--color);
   border-radius: 30px;
 }
 span {

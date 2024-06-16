@@ -21,7 +21,7 @@ function OffComponent(props) {
   }, []);
 
   return (
-    <div>
+    <div className={styles.mainbg}>
       {others.map((eleme) => {
         return (
           <div className={styles.main} key={eleme.id}>

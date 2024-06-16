@@ -1,19 +1,25 @@
+.mainbg {
+  background-color: var(--back-color);
+}
 .main {
   display: flex;
+  background-color: var(--back-color);
   justify-content: center;
-  margin: 50px 15px;
 }
 .text {
+  margin: 50px 15px;
   display: flex;
   align-items: center;
   padding: 5px 30px;
-  background-color: #232529;
+  background-color: var(--back-help-color);
+  color: var(--color);
   border-radius: 30px;
   max-width: 500px;
   font-size: 26px;
   margin-right: 10px;
 }
 .img {
+  margin: 50px 15px;
   border-radius: 20px;
   transition: transform 0.2s ease-in-out;
 }

@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
 #root {
@@ -15,9 +15,13 @@
   --back-color: #282a2e;
   --back-help-color: #232529;
   --color: white;
+  --navbar-color: yellow;
+  --navbar-main: rgb(190, 190, 0);
 }
 .light {
   --back-color: white;
   --back-help-color: #cfcfcf;
   --color: black;
+  --navbar-color: darkblue;
+  --navbar-main: rgba(0, 0, 255, 0.7);
 }

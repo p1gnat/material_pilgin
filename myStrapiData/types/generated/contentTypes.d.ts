@@ -822,6 +822,7 @@ export interface ApiOtherOther extends Schema.CollectionType {
     singularName: 'other';
     pluralName: 'others';
     displayName: 'Other';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -898,6 +899,7 @@ export interface ApiTextText extends Schema.CollectionType {
     link: Attribute.String;
     imgLink: Attribute.String;
     text: Attribute.RichText;
+    mainWord: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
